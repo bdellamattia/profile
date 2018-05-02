@@ -1,0 +1,214 @@
+body {
+  background-image: url(images/FOND SELECTION PRO.png);
+  background: -webkit-linear-gradient(right, #6aa7c1,#e4efe9);
+  background: -o-linear-gradient(right, #6aa7c1,#e4efe9);
+  background: linear-gradient(to left, #6aa7c1,#e4efe9);
+  font-family: 'Abel', sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h1, h2, h3 {
+  font-family: 'Bitter', serif;
+  font-weight: 300;
+  font-size: 23px;
+  color: #2f7593;
+  margin-bottom: 25px;
+  letter-spacing: 0.03em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.white-box {
+  background-color:white;
+  text-align:center;
+  width: 530px;
+  margin: 15px auto 15px auto;
+  padding: 30px 100px 30px 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #d3cecd;
+}
+
+#profile-picture {
+  width: 150px;
+  border-radius: 50%;
+  filter: grayscale(15%);
+  box-shadow: 1px 1px 4px #d3cecd;
+}
+
+.movie-poster {
+  width: 170px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 4px #d3cecd;
+}
+
+.social-inline > ul > li {
+  display: inline-block;
+  padding: 30px;
+  font-size: 25px;
+}
+
+a:hover, .social-inline > ul > li a:hover {
+  opacity: 0.5;
+}
+
+
+a {
+  color: #2f7593;
+  text-decoration: none;
+}
+
+
+.btn-check {
+  line-height: 3;
+  padding-top:0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  border: 1px solid #2f7593;
+  opacity: 1;
+  box-shadow: 1px 1px 4px #d3cecd;
+}
+
+
+th {
+  text-align: left;
+  padding-left: 30px;
+ }
+
+.desc_film {
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: #2f7593;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Icon Pulse Grow */
+@-webkit-keyframes hvr-icon-pulse-grow {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+@keyframes hvr-icon-pulse-grow {
+  to {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+.hvr-icon-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-pulse-grow .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-pulse-grow:hover .hvr-icon, .hvr-icon-pulse-grow:focus .hvr-icon, .hvr-icon-pulse-grow:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-pulse-grow;
+  animation-name: hvr-icon-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+  .white-box{
+    width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+    margin-left: 20px auto;
+  }
+  .white-box{
+    width: 100%;
+    padding: 30px;
+  }
+  .social-inline > ul > li {
+  display: inline-block;
+  padding: 20px;
+  font-size: 20px;
+}
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 340px;
+  }
+  .white-box {
+    width: 340px;
+    padding: 15px;
+    margin: 30px auto;
+    padding-left: 40px;
+  }
+  .desc-film {
+   padding-left: 30px;
+  }
+
+  .desc-film p{
+  padding-left: 30px;
+  }
+}
