@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0b0f;
+  --panel: #16161d;
+  --panel-2: #1f1f29;
+  --line: #2a2a36;
+  --text: #f4f4f6;
+  --muted: #9a9aab;
+  --lime: #c6ff3d;
+  --pink: #ff4d8d;
+  --sky: #4dd2ff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-lime: var(--lime);
+  --color-pink: var(--pink);
+  --color-sky: var(--sky);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3.5 font-display text-base uppercase transition active:scale-[0.97] disabled:opacity-50;
+}
+@utility btn-lime {
+  @apply btn bg-lime text-black;
+}
+@utility btn-ghost {
+  @apply btn border border-line bg-panel text-text;
+}
+@utility input {
+  @apply w-full rounded-2xl border border-line bg-panel px-4 py-3.5 text-base text-text outline-none placeholder:text-muted focus:border-lime;
+}
+@utility card {
+  @apply rounded-3xl border border-line bg-panel;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: pop 0.35s ease-out both;
+}
